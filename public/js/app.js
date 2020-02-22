@@ -8,7 +8,8 @@ weatherForm.addEventListener("submit", e => {
   const location = search.value;
   console.log("TESTing!", location);
   message.innerHTML = `<p>Loaaaaading ...</p>`;
-  fetch(`http://localhost:3000/weather?address=${location}`).then(response =>
+  //third change
+  fetch(`/weather?address=${location}`).then(response =>
     response.json().then(data => {
       console.log(data);
       if (data.err) {
